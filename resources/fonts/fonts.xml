@@ -1,0 +1,5 @@
+<fonts>
+    <font id="txt_lrg" filename="text_lrg.fnt" />
+    <font id="txt_med" filename="text_med.fnt" />
+    <font id="txt_hr" filename="text_hr.fnt" />
+</fonts>
