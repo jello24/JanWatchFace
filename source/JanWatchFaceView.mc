@@ -47,8 +47,7 @@ class JanWatchFaceView extends WatchUi.WatchFace {
     function onUpdate(dc) {
     
     	//var priClr = Graphics.COLOR_DK_GREEN;
-    	// var priClr = 0x00FA9A;
-    	var priClr = 0x85E5B5;
+    	var priClr = 0x00FA9A;
     	var secClr = Graphics.COLOR_WHITE;
     	var bgClr = Graphics.COLOR_BLACK;
     	var trClr = Graphics.COLOR_TRANSPARENT;
