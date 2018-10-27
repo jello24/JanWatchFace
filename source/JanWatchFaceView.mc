@@ -61,7 +61,11 @@ class JanWatchFaceView extends WatchUi.WatchFace {
         var hours = clockTime.hour;
         var min = clockTime.min;
         var minStr = numToWords[0];
-               
+        
+        // Testing Purposes Only       
+        hours = 11;
+        min = 27;
+        ////////////////////////
         
         if (!System.getDeviceSettings().is24Hour) {
             if (hours > 12) {
@@ -156,12 +160,12 @@ class JanWatchFaceView extends WatchUi.WatchFace {
         //dc.drawText(center_x, center_y + 80, led_med, dateString, Graphics.TEXT_JUSTIFY_CENTER | Graphics.TEXT_JUSTIFY_VCENTER);
         dc.setColor(priClr, trClr);
         dc.drawText(15, center_y - 40, txt_hr, hourStr, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawRectangle(0, center_y + 22, watch_width, 2);
-        dc.drawText(center_x, center_y + 45, txt_med, info.day_of_week, Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawRectangle(0, center_y + 30, watch_width, 2);
+        dc.drawText(center_x, center_y + 52, txt_med, info.day_of_week, Graphics.TEXT_JUSTIFY_RIGHT | Graphics.TEXT_JUSTIFY_VCENTER);
         
         dc.setColor(secClr, trClr);
         dc.drawText(15, center_y, txt_lrg, minStr, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
-        dc.drawText(center_x, center_y + 45, txt_med, " " + info.day, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
+        dc.drawText(center_x, center_y + 52, txt_med, " " + info.day, Graphics.TEXT_JUSTIFY_LEFT | Graphics.TEXT_JUSTIFY_VCENTER);
         
         // Show bluetooth and mail icon
         var offset = 0;
@@ -171,9 +175,9 @@ class JanWatchFaceView extends WatchUi.WatchFace {
 			if (System.getDeviceSettings().notificationCount > 0)
 			{
 				offset = 20;  
-				dc.drawBitmap(center_x + offset, center_y + 80, loadResource(Rez.Drawables.MailIcon));
+				dc.drawBitmap(center_x - 8+ offset, center_y + 80, loadResource(Rez.Drawables.MailIcon));
 			}
-			dc.drawBitmap(center_x + (-1 * offset), center_y + 80, loadResource(Rez.Drawables.BTIcon));
+			dc.drawBitmap(center_x -8 + (-1 * offset), center_y + 80, loadResource(Rez.Drawables.BTIcon));
 		}
 		
     }
